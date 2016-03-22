@@ -41,8 +41,7 @@ TARGET_CPU_VARIANT := krait
 # Assertions
 TARGET_BOARD_INFO_FILE ?= $(PLATFORM_PATH)/board-info.txt
 
-# Tipsy additions
-BLOCK_BASED_OTA=false
+
 # Optimizations
 CLANG_O3 := true
 STRICT_ALIASING := false
@@ -51,10 +50,10 @@ GRAPHITE_OPTS := false
 ENABLE_GCCONLY := true
 
 # Kernel Toolchain
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9-uber/bin
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 # Rom Toolchain
-TARGET_GCC_VERSION_EXP := 4.9-uber
+TARGET_GCC_VERSION_EXP := 4.9
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
